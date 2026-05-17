@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security boundary
+    url: https://github.com/eclipseai-xx/eclipse-ai-public/blob/main/SECURITY.md
+    about: Read before reporting anything sensitive.
