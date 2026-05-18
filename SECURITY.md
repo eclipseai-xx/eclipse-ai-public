@@ -1,24 +1,42 @@
 # Security Policy
 
+Eclipse AI is operated as a private runtime. This public repository is documentation-only and is maintained with a strict publication boundary.
+
 ## Scope
 
-This public repository is documentation-only. It does not contain the private Eclipse runtime, backend source code, credentials, wallet data, browser profiles, local databases, logs, or production infrastructure configuration.
+This repository may contain:
 
-## Reporting
+- Public documentation
+- High-level architecture descriptions
+- Capability summaries
+- Privacy and security policy text
+- Public project identity links
 
-If you believe something sensitive was accidentally published here, open a GitHub issue with a high-level description only. Do not paste secrets, tokens, private keys, wallet seed material, private logs, or exploit details into a public issue.
+This repository must not contain:
 
-## Publication Rules
+- Private runtime or backend source code
+- Credentials, API keys, OAuth tokens, webhooks, cookies, or browser profiles
+- Wallet private keys, seed phrases, raw wallet data, or operational wallet lists
+- Local databases, logs, `.env` files, prompts, private memory, or coordination state
+- Screenshots that expose dashboards, balances, account IDs, tokens, private wallet material, or operational state
 
-The following must never be committed:
+## Reporting A Concern
 
-- `.env` files or environment-specific configuration
-- API keys, OAuth tokens, webhook secrets, or provider credentials
-- Wallet private keys, seed phrases, or private operational wallet addresses
-- Raw transaction logs, wallet dumps, browser profiles, or local databases
-- Runtime source code, backend implementation files, internal prompts, or private memory
-- Screenshots that reveal dashboards, keys, account identifiers, or private operational state
+If you believe sensitive material was accidentally published here, open a GitHub issue with a high-level description only.
 
-## Current Posture
+Do not paste secrets, tokens, private keys, seed phrases, exploit details, wallet dumps, private logs, or screenshots containing sensitive data into a public issue.
 
-The repository is intentionally limited to public-facing documentation and high-level architecture descriptions. It should be safe to share publicly because it does not include executable backend code or private runtime artifacts.
+## Security Posture
+
+The repository is configured as a public documentation surface:
+
+- Secret scanning and push protection are enabled where GitHub supports them.
+- GitHub Actions are disabled because this repository does not build or deploy code.
+- The default branch is protected against accidental force pushes and deletion.
+- The private runtime is not mirrored into this repository.
+
+## Publication Rule
+
+If a file is needed to operate Eclipse, it does not belong in this repository.
+
+If a file explains Eclipse publicly without revealing private implementation, it may belong here after review.

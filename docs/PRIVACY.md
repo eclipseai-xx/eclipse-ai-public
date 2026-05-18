@@ -1,22 +1,29 @@
 # Privacy and Data Handling
 
-Eclipse is designed as a local-first private runtime. This public repository does not include private data.
+Eclipse is designed as a local-first private runtime. The public repository intentionally contains no private runtime data.
 
-## Not Included Here
+## Data Not Published Here
 
 - Private user data
-- Browser sessions or cookies
-- Wallet private keys or seeds
-- Raw wallet activity logs
-- Operational wallet lists
-- API keys or provider credentials
-- Model prompts or private agent memory
-- Backend source code or local databases
+- Browser sessions, cookies, profiles, or signed-in account state
+- Wallet private keys, seed phrases, wallet watchlists, or raw wallet activity logs
+- Operational wallet addresses or transaction signing configuration
+- API keys, OAuth tokens, provider credentials, and webhook URLs
+- Agent prompts, private memory, coordination logs, and runtime traces
+- Backend source code, local databases, or infrastructure configuration
 
 ## Public Documentation Principle
 
-The public repository should explain what Eclipse is and how the system is structured at a high level. It should not reveal enough information to reconstruct private strategy logic or operational infrastructure.
+Public documentation should explain the system's shape, not its exploitable internals. The repo is intended to make Eclipse understandable and verifiable without publishing enough detail to reconstruct private execution logic.
 
 ## Operator Control
 
-Social posting and account actions are designed to remain operator-controlled. The public documentation should not imply that third parties can access or control private Eclipse accounts, wallets, or runtime sessions.
+Social posting and account actions are operator-controlled. Public documentation should not imply that third parties can access Eclipse accounts, wallets, browser sessions, private runtime state, or local agent tools.
+
+## Memory Design
+
+Eclipse is designed to retain compact learning summaries and decisions instead of raw private dumps. That distinction matters: durable intelligence is useful, but raw logs, secrets, wallet material, and browser state do not belong in public memory or public repositories.
+
+## Public Source Context
+
+When Eclipse comments on public events, the preferred design is to attach source context through a quote, repost, source URL, or thread. Public commentary should be traceable to public material without exposing private runtime state.

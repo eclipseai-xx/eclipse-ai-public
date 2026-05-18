@@ -1,44 +1,79 @@
 # Eclipse AI
 
-Eclipse is a private autonomous AI agent system for real-time market intelligence, wallet-behavior analytics, narrative tracking, paper-trade simulation, and operator-controlled social execution.
+**Eclipse is a private autonomous AI operator for market intelligence, wallet analytics, narrative tracking, paper-trade simulation, and source-aware social execution.**
 
-This repository is the public verification and overview page for the project. It is intentionally documentation-only. The private runtime, backend source code, trading logic, wallet data, prompts, logs, browser profiles, API keys, and infrastructure configuration are not included.
+[![Public docs](https://img.shields.io/badge/repository-public%20docs-111827)](https://github.com/eclipseai-xx/eclipse-ai-public)
+[![Runtime](https://img.shields.io/badge/runtime-private-7c3aed)](docs/SECURITY_BOUNDARY.md)
+[![Security boundary](https://img.shields.io/badge/security-boundary%20documented-059669)](SECURITY.md)
+[![Official X](https://img.shields.io/badge/X-@EclipseAI127305-000000)](https://x.com/EclipseAI127305)
 
-## What Eclipse Does
+This repository is the public technical dossier for Eclipse. It explains what the system does, how its major subsystems fit together, and where the security boundary is drawn. It is not an open-source release of the private runtime.
 
-- Tracks public market and social signals across crypto-native sources.
-- Monitors wallet behavior, wallet reputation, and clustered funding patterns.
-- Scores token opportunities using confluence from wallet activity, market structure, narrative strength, and risk evidence.
-- Simulates paper-trade entries, exits, position sizing, market cap at entry, and PnL for strategy evaluation.
-- Maintains long-running memory so prior decisions, outcomes, and operator feedback can improve later behavior.
-- Uses browser automation for public-source research while keeping signed-in profiles and runtime state local.
-- Supports operator-controlled X/Twitter posting, replies, quote context, and source-aware public commentary.
+The private codebase, backend services, model prompts, API credentials, wallet data, browser profiles, runtime state, logs, strategy implementation, and execution infrastructure are intentionally not published.
 
-## Public vs Private Boundary
+## What Eclipse Is
 
-This repo contains only safe public documentation.
+Eclipse is built around one operating loop:
 
-Not published here:
+1. Observe public market, wallet, and social activity.
+2. Convert raw events into structured signals.
+3. Compare signals against wallet reputation, market structure, narrative strength, and risk evidence.
+4. Simulate trade decisions with entry market cap, sizing, exits, and outcome tracking.
+5. Feed results back into memory so future decisions become more selective.
+6. Use operator-controlled social tools to react publicly with source context attached.
 
-- Backend/runtime source code
-- Agent prompts and private reasoning traces
-- API keys, provider credentials, webhook URLs, or auth tokens
-- Wallet private keys, seed phrases, or operational wallet addresses
-- Raw wallet logs, transaction dumps, browser profiles, local databases, or `.env` files
-- Strategy implementation details that would expose execution logic
-- Internal coordination state or private memory files
+The system is designed for fast-moving environments where narrative, liquidity, wallet behavior, and timing all matter at once.
+
+## System Snapshot
+
+| Area | Public description |
+| --- | --- |
+| Signal ingestion | Watches public launch, migration, market, news, and social signals. |
+| Wallet intelligence | Tracks wallet behavior, reputation, round trips, and funding relationships. |
+| Risk analysis | Reviews holder concentration, liquidity quality, suspicious clustering, and manipulation patterns. |
+| Narrative engine | Maps public posts, cultural hooks, news events, and token lore into structured context. |
+| Paper trading | Simulates entries, exits, sizing, entry market cap, PnL, and strategy outcomes. |
+| Memory | Stores compact decisions and learned summaries instead of raw private logs. |
+| Social execution | Supports source-aware posts, quote context, reply safety, and thread-safe long-form posting. |
+
+## Architecture At A Glance
+
+```mermaid
+flowchart LR
+  A["Public market feeds"] --> D["Signal normalization"]
+  B["Tracked wallet behavior"] --> E["Wallet intelligence"]
+  C["Social and news context"] --> F["Narrative intelligence"]
+  D --> G["Confluence and risk scoring"]
+  E --> G
+  F --> G
+  G --> H["Paper-trade simulator"]
+  G --> I["Operator alerts and chat"]
+  H --> J["Outcome learning"]
+  J --> E
+  J --> F
+  J --> G
+  I --> K["Source-aware social tools"]
+```
+
+## What Is Public Here
+
+- High-level architecture
+- Capability summaries
+- Public security boundary
+- Privacy posture
+- Roadmap principles
+- FAQ and public identity links
+
+## What Is Not Public
+
+- Runtime or backend source code
+- Trading strategy implementation
+- Exact private thresholds, prompts, memory, or coordination state
+- Wallet private keys, seed phrases, watchlists, raw wallet dumps, or operational wallet addresses
+- API keys, provider credentials, webhook URLs, OAuth material, cookies, or browser profiles
+- Logs, local databases, `.env` files, screenshots with private dashboards, or infrastructure configuration
 
 See [Security Boundary](docs/SECURITY_BOUNDARY.md) for the full publication policy.
-
-## System Areas
-
-- **Signal ingestion:** public market feeds, launch/migration signals, Dex data, and social/news context.
-- **Wallet intelligence:** tracked-wallet monitoring, reputation scoring, round-trip outcome learning, and funding-graph analysis.
-- **Risk analysis:** holder concentration checks, suspicious clustering patterns, liquidity/volume sanity checks, and manipulation evidence.
-- **Narrative intelligence:** internet-culture and news-aware context mapping so meme/lore strength can be separated from generic noise.
-- **Paper trading:** simulated entries/exits with fast scalp logic, confidence sizing, and runner handling for unusually strong narratives.
-- **Shared memory:** compact decision records and self-knowledge for cross-agent continuity without storing raw secrets or noisy logs.
-- **Social automation:** source-attached opinions, quote/retweet context, reply safety, and thread-safe long-post behavior.
 
 ## Documentation
 
@@ -46,6 +81,7 @@ See [Security Boundary](docs/SECURITY_BOUNDARY.md) for the full publication poli
 - [Capabilities](docs/CAPABILITIES.md)
 - [Security Boundary](docs/SECURITY_BOUNDARY.md)
 - [Privacy and Data Handling](docs/PRIVACY.md)
+- [Public Verification](docs/VERIFICATION.md)
 - [Roadmap](docs/ROADMAP.md)
 - [FAQ](docs/FAQ.md)
 
@@ -56,8 +92,8 @@ See [Security Boundary](docs/SECURITY_BOUNDARY.md) for the full publication poli
 
 ## Status
 
-Eclipse is an active private research/runtime project. This public repository exists so people can verify the project identity and understand the system at a high level without exposing the proprietary backend.
+Eclipse is an active private research and operations system. This repository exists so the public can verify the project identity and understand the technical shape of the agent without exposing sensitive infrastructure.
 
 ## Disclaimer
 
-Eclipse is experimental software. Nothing in this repository is financial advice, trading advice, or an invitation to copy trades. Any live or simulated market behavior should be treated as high risk.
+Eclipse is experimental software. This repository is not financial advice, trading advice, an offer to trade, or a promise of market performance. Any live or simulated market behavior should be treated as high risk.

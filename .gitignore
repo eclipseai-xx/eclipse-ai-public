@@ -5,12 +5,24 @@
 
 # Runtime state and logs
 .agent-state/
+.codex/
+.claude/
+.cursor/
+.vscode/
 logs/
 *.log
 *.jsonl
 *.db
 *.sqlite
 *.sqlite3
+*.bak
+*.tmp
+*.temp
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
 
 # Browser and auth state
 browser-profile/
@@ -46,7 +58,11 @@ private/
 backend/
 runtime/
 src/
+scripts/
+examples/
 secrets/
 wallets/
 wallet-data/
 coordination/
+models/
+data/

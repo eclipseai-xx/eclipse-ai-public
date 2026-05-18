@@ -1,57 +1,100 @@
 # Architecture Overview
 
-Eclipse is structured as a local-first autonomous agent runtime with separate lanes for market ingestion, wallet intelligence, narrative context, paper-trade simulation, memory, and operator-facing chat/social control.
+Eclipse is a local-first autonomous agent runtime with isolated lanes for market ingestion, wallet intelligence, narrative context, risk scoring, paper-trade simulation, memory, and operator-facing social control.
 
-This page describes the architecture at a safe public level. It intentionally avoids private source code, thresholds, wallet lists, API contracts, prompts, and execution logic.
+This document describes the architecture at a public level. It avoids private source code, exact thresholds, wallet lists, prompts, API contracts, and execution logic.
 
-## High-Level Flow
+## Operating Model
 
 ```mermaid
-flowchart LR
-  A["Public market and social sources"] --> B["Signal ingestion"]
-  C["Tracked wallet activity"] --> D["Wallet intelligence"]
-  B --> E["Risk and confluence scoring"]
-  D --> E
-  F["Narrative and culture context"] --> E
-  E --> G["Paper-trade simulator"]
-  E --> H["Operator chat and alerts"]
-  G --> I["Outcome learning"]
-  H --> J["Source-aware social tools"]
-  I --> D
-  I --> F
-  I --> E
+flowchart TD
+  subgraph Inputs
+    A["Public token launches and migrations"]
+    B["Market data and liquidity context"]
+    C["Tracked wallet activity"]
+    D["Public X/news/culture signals"]
+  end
+
+  subgraph Intelligence
+    E["Signal normalization"]
+    F["Wallet reputation and funding graph"]
+    G["Narrative and lore classifier"]
+    H["Risk and manipulation review"]
+  end
+
+  subgraph Decisions
+    I["Confluence score"]
+    J["Paper-trade entry/exit simulation"]
+    K["Operator alerts"]
+    L["Source-aware public commentary"]
+  end
+
+  subgraph Learning
+    M["Outcome attribution"]
+    N["Compact memory"]
+    O["Wallet and narrative model updates"]
+  end
+
+  A --> E
+  B --> E
+  C --> F
+  D --> G
+  E --> H
+  F --> I
+  G --> I
+  H --> I
+  I --> J
+  I --> K
+  K --> L
+  J --> M
+  M --> N
+  N --> O
+  O --> F
+  O --> G
+  O --> H
 ```
 
 ## Core Subsystems
 
-### Signal Ingestion
+### 1. Signal Ingestion
 
-Eclipse watches public launch, migration, market, and social context. The ingestion layer normalizes candidate events into a shared scoring pipeline so raw market events and social narratives can be compared consistently.
+The ingestion layer watches public market and social sources, then normalizes raw events into candidate signals. It is built to separate launch noise from events with real follow-through, such as migration, post-graduation volume, wallet participation, or strong public narrative context.
 
-### Wallet Intelligence
+### 2. Wallet Intelligence
 
-The wallet layer tracks known wallets, builds reputation from observed behavior, studies buy/sell round trips, and looks for funding relationships between wallets. The goal is to separate real early positioning from low-quality noise.
+The wallet layer studies tracked-wallet behavior over time. It observes entries, exits, round trips, timing, repeated success patterns, and funding relationships between wallets. The purpose is not to blindly copy wallets, but to understand which wallets add useful signal and which wallets are noise.
 
-### Risk and Confluence
+### 3. Risk And Manipulation Review
 
-The scoring layer combines wallet reputation, market structure, liquidity, holder distribution, volume quality, narrative strength, and risk evidence. Unsafe or low-confidence setups can be downgraded or blocked before any simulated entry.
+The risk layer looks for evidence that a setup is unsafe or low quality. Publicly describable checks include liquidity sanity, holder concentration, suspicious clustering, same-funder behavior, extreme volume-to-market-cap ratios, and stale or missing market data.
 
-### Narrative Intelligence
+### 4. Narrative Intelligence
 
-Eclipse tracks internet culture, news hooks, public tweets, lore patterns, and tech-driven narratives. This lets the system treat generic low-signal launches differently from tokens attached to unusually strong attention events.
+Eclipse tracks public cultural context: high-motion posts, news hooks, memes, token lore, tech narratives, and repeated social patterns. This lets the system distinguish generic launches from moments where attention, timing, and market behavior align.
 
-### Paper-Trade Simulation
+### 5. Paper-Trade Simulation
 
-The simulator records simulated entry size, entry market cap, exit timing, profit/loss, and exit reason. Outcomes feed learning loops so future decisions can adapt to what actually worked or failed.
+The simulator records the decision as if it were a trade: entry market cap, simulated sizing, exit reason, exit timing, PnL, and strategy outcome. This creates feedback without publishing private execution infrastructure.
 
-### Shared Memory
+### 6. Memory And Coordination
 
-Eclipse stores compact decisions and learned summaries rather than raw dumps. This keeps agent continuity high without turning memory into a secret-filled log archive.
+Eclipse stores compact decisions and outcome summaries instead of dumping raw logs into memory. That gives later agents continuity without preserving secrets, private wallet material, browser data, or noisy runtime traces.
 
-### Social Execution
+### 7. Source-Aware Social Control
 
-The social layer is operator-controlled and source-aware. When Eclipse comments on a public trend, it is designed to preserve context through quote/retweet/source attachment instead of posting disconnected opinions.
+The social layer is operator-controlled. When Eclipse reacts publicly to an event, the design goal is to preserve context through a quote, repost, source URL, or thread instead of posting detached opinions.
 
-## Privacy Design
+## Trust Boundaries
 
-Private runtime data stays local. Public documentation should describe capabilities without exposing implementation details that could leak operational strategy, credentials, wallets, or internal prompts.
+| Boundary | Public posture |
+| --- | --- |
+| Public documentation | Safe to publish and inspect. |
+| Runtime source code | Private. Not included in this repository. |
+| Wallet state | Private. No keys, seeds, raw dumps, or operational wallet lists are published. |
+| Browser/auth state | Private. No cookies, profiles, tokens, or signed-in session data are published. |
+| Strategy implementation | Private. Public docs describe system areas only. |
+| Social accounts | Operator-controlled. Public docs list only confirmed official links. |
+
+## Design Principle
+
+The public repo should make the system understandable without making the private runtime reproducible.

@@ -1,17 +1,23 @@
 ---
 name: Documentation feedback
-about: Suggest a public documentation improvement
+about: Suggest a public documentation improvement without sharing sensitive information
 title: "[Docs] "
 labels: documentation
 assignees: ""
 ---
 
-## What should change?
+## Page or section
 
+Which public page should be improved?
 
-## Why?
+## Suggested improvement
 
+Describe the wording, clarification, or public documentation update.
+
+## Why it matters
+
+Explain what a public reader would understand better after the change.
 
 ## Sensitive information check
 
-Please do not include API keys, wallet data, private logs, screenshots with account information, or private runtime details.
+Do not include API keys, wallet data, private logs, screenshots with account information, runtime state, private prompts, browser profiles, or operational details.
