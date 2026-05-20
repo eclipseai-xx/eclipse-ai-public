@@ -10,6 +10,7 @@ This repository is intentionally separated from the private Eclipse runtime. Its
 - Public roadmap themes
 - High-level Mercury persona role and guardrails
 - High-level Hermes/OpenClaw integration roles
+- High-level persistent memory and cross-agent continuity concepts
 - Security and privacy policy text
 - Official public links confirmed by the operator
 - Non-sensitive documentation corrections
@@ -49,7 +50,7 @@ Examples:
 | --- | --- |
 | "Eclipse reviews wallet reputation." | "Here is the full wallet list and scoring formula." |
 | "Eclipse uses market-cap and liquidity context." | "Here are the exact private thresholds and routing code." |
-| "Eclipse stores compact learning summaries." | "Here are raw logs, prompts, memory files, and runtime traces." |
+| "Eclipse stores compact learning summaries for cross-agent continuity." | "Here are raw logs, prompts, memory files, coordination records, and runtime traces." |
 | "Eclipse can attach public source context to posts." | "Here are cookies, browser profiles, tokens, or signed-in session data." |
 
 ## License Position

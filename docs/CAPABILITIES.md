@@ -48,7 +48,7 @@ This page describes capabilities at a public level. It does not publish private 
 ## Agent Runtime
 
 - Local-first runtime design
-- Long-running memory and coordination state
+- Persistent memory and coordination state
 - Browser automation lanes for public-source research
 - Shared decision capture across agent tools
 - Health and status surfaces for runtime monitoring
@@ -60,6 +60,7 @@ This page describes capabilities at a public level. It does not publish private 
 | --- | --- |
 | Hermes compatibility | Accepts compatible local-model tool-call formats and keeps Hermes decisions tied into compact shared continuity. |
 | OpenClaw sidecar support | Lets approved local agents coordinate with Eclipse through an optional gateway and heartbeat-style workspace layer. |
+| Persistent memory | Preserves compact decisions, outcomes, and handoffs across agents, sessions, and restarts without relying on one giant prompt. |
 | Shared decision layer | Stores concise decisions from participating agents without publishing raw logs, prompts, credentials, wallet data, or runtime state. |
 | Boundary enforcement | Keeps public documentation separate from private source code, strategy logic, environment configuration, and operational data. |
 

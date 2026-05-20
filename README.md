@@ -33,7 +33,7 @@ The system is designed for fast-moving environments where narrative, liquidity, 
 | Risk analysis | Reviews holder concentration, liquidity quality, suspicious clustering, and manipulation patterns. |
 | Narrative engine | Maps public posts, cultural hooks, news events, and token lore into structured context. |
 | Paper trading | Simulates entries, exits, sizing, entry market cap, PnL, and strategy outcomes. |
-| Memory | Stores compact decisions and learned summaries instead of raw private logs. |
+| Memory | Provides persistent cross-agent continuity through compact decisions and learned summaries instead of raw private logs. |
 | Agent integrations | Uses local agent adapters such as Hermes and optional gateway coordination through OpenClaw. |
 | Mercury | The public-facing social persona for Eclipse on X: short, cryptic, source-aware, and meme-intel focused. |
 | Social execution | Supports source-aware posts, quote context, reply safety, and thread-safe long-form posting. |
@@ -82,6 +82,7 @@ See [Security Boundary](docs/SECURITY_BOUNDARY.md) for the full publication poli
 
 - [Architecture Overview](docs/ARCHITECTURE.md)
 - [Capabilities](docs/CAPABILITIES.md)
+- [Persistent Agent Memory](docs/PERSISTENT_MEMORY.md)
 - [Hermes and OpenClaw Integrations](docs/INTEGRATIONS.md)
 - [Mercury Public Persona](docs/MERCURY.md)
 - [Security Boundary](docs/SECURITY_BOUNDARY.md)

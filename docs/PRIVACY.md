@@ -22,7 +22,9 @@ Social posting and account actions are operator-controlled. Public documentation
 
 ## Memory Design
 
-Eclipse is designed to retain compact learning summaries and decisions instead of raw private dumps. That distinction matters: durable intelligence is useful, but raw logs, secrets, wallet material, and browser state do not belong in public memory or public repositories.
+Eclipse is designed to retain compact learning summaries, handoff records, and decisions instead of raw private dumps. That distinction matters: durable intelligence is useful, but raw logs, secrets, wallet material, prompts, and browser state do not belong in public memory or public repositories.
+
+The public memory model is documented in [Persistent Agent Memory](PERSISTENT_MEMORY.md). The implementation, private records, schemas, thresholds, paths, and coordination state remain private.
 
 ## Public Source Context
 

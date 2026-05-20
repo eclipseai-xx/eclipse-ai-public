@@ -32,6 +32,14 @@ No. Eclipse is experimental software. Nothing in this repository is financial ad
 
 The public version can safely say this: Eclipse combines wallet reputation, market structure, narrative context, risk evidence, simulation, and memory in one agent loop. It is designed to learn from outcomes rather than treat any single signal as absolute.
 
+## How does persistent memory between agents work?
+
+Eclipse stores compact decision records, handoff summaries, and outcome notes that can be reused by later agents. A later agent does not need the entire previous chat or raw runtime log. It receives the relevant public-safe or private-scoped summaries needed for the current task.
+
+That is the core technical difference: memory is treated as a coordination layer between agents, not as a longer prompt. Agents can inherit useful state across sessions, tools, and restarts while secrets, prompts, wallet data, browser state, and exact strategy logic stay private.
+
+See [Persistent Agent Memory](PERSISTENT_MEMORY.md).
+
 ## How are Hermes and OpenClaw used?
 
 Hermes is used as a local agent compatibility and continuity lane around Eclipse. OpenClaw is used as an optional local sidecar/gateway for agent workspace coordination and heartbeat-style checks. Neither tool makes the private Eclipse runtime public, and neither publishes private prompts, wallet data, credentials, raw logs, or strategy implementation.

@@ -32,7 +32,7 @@ flowchart TD
 
   subgraph Learning
     M["Outcome attribution"]
-    N["Compact memory"]
+    N["Persistent memory and handoffs"]
     O["Wallet and narrative model updates"]
   end
 
@@ -87,9 +87,13 @@ Eclipse tracks public cultural context: high-motion posts, news hooks, memes, to
 
 The simulator records the decision as if it were a trade: entry market cap, simulated sizing, exit reason, exit timing, PnL, and strategy outcome. This creates feedback without publishing private execution infrastructure.
 
-### 6. Memory And Coordination
+### 6. Persistent Memory And Coordination
 
-Eclipse stores compact decisions and outcome summaries instead of dumping raw logs into memory. That gives later agents continuity without preserving secrets, private wallet material, browser data, or noisy runtime traces.
+Eclipse stores compact decisions, handoff records, and outcome summaries instead of dumping raw logs into memory. That gives later agents continuity without preserving secrets, private wallet material, browser data, prompts, or noisy runtime traces.
+
+The memory layer is designed to survive across model calls, agent tools, runtime restarts, and operator handoffs. Instead of relying on one huge context window, Eclipse can select relevant durable records and inject only the scoped summaries needed for the current task.
+
+See [Persistent Agent Memory](PERSISTENT_MEMORY.md) for the public description of this layer.
 
 ### 7. Source-Aware Social Control
 
@@ -114,6 +118,7 @@ These integrations do not replace Eclipse. They help external local agents work 
 | Strategy implementation | Private. Public docs describe system areas only. |
 | Social accounts | Operator-controlled. Public docs list only confirmed official links. |
 | Mercury persona | Public docs describe the role and guardrails. Private prompts, exact rules, and runtime context are not published. |
+| Persistent memory | Public docs describe the continuity model. Private records, schemas, prompts, paths, and coordination state are not published. |
 | Hermes/OpenClaw integrations | Public docs describe role and boundary only. Private configuration and operational details are not published. |
 
 ## Design Principle

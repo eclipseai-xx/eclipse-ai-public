@@ -65,6 +65,8 @@ Eclipse, Hermes, OpenClaw, and other approved local agents can write compact coo
 
 This gives local agents memory of what changed without exposing sensitive operational data.
 
+The same layer is described in more detail in [Persistent Agent Memory](PERSISTENT_MEMORY.md). In public terms, the key idea is that agents share scoped decisions and outcomes, not unrestricted private state.
+
 ## Boundary Rules
 
 Hermes and OpenClaw integrations follow the same publication boundary as the rest of Eclipse.
