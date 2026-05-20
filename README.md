@@ -35,6 +35,7 @@ The system is designed for fast-moving environments where narrative, liquidity, 
 | Paper trading | Simulates entries, exits, sizing, entry market cap, PnL, and strategy outcomes. |
 | Memory | Stores compact decisions and learned summaries instead of raw private logs. |
 | Agent integrations | Uses local agent adapters such as Hermes and optional gateway coordination through OpenClaw. |
+| Mercury | The public-facing social persona for Eclipse on X: short, cryptic, source-aware, and meme-intel focused. |
 | Social execution | Supports source-aware posts, quote context, reply safety, and thread-safe long-form posting. |
 
 ## Architecture At A Glance
@@ -53,7 +54,8 @@ flowchart LR
   J --> E
   J --> F
   J --> G
-  I --> K["Source-aware social tools"]
+  I --> K["Mercury social persona"]
+  K --> L["Source-aware social tools"]
 ```
 
 ## What Is Public Here
@@ -81,6 +83,7 @@ See [Security Boundary](docs/SECURITY_BOUNDARY.md) for the full publication poli
 - [Architecture Overview](docs/ARCHITECTURE.md)
 - [Capabilities](docs/CAPABILITIES.md)
 - [Hermes and OpenClaw Integrations](docs/INTEGRATIONS.md)
+- [Mercury Public Persona](docs/MERCURY.md)
 - [Security Boundary](docs/SECURITY_BOUNDARY.md)
 - [Privacy and Data Handling](docs/PRIVACY.md)
 - [Public Verification](docs/VERIFICATION.md)

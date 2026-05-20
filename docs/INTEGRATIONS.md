@@ -9,8 +9,23 @@ This page describes the relationship at a public level. It does not publish priv
 | Component | Public role inside Eclipse |
 | --- | --- |
 | Eclipse runtime | The private local operator that owns ingestion, wallet intelligence, risk review, simulation, learning, and operator-facing workflows. |
+| Mercury | The public-facing social persona that turns approved Eclipse context into short, source-aware public language. |
 | Hermes | A local agent compatibility lane used for tool-call parsing, local environment readiness, and durable cross-agent decision continuity. |
 | OpenClaw | An optional local sidecar/gateway layer used for agent workspace onboarding, heartbeat-style coordination, and external agent access to approved Eclipse context. |
+
+## Mercury
+
+Mercury is not a sidecar runtime. She is the public social persona used when Eclipse speaks outward.
+
+Publicly describable uses include:
+
+- Turning approved Eclipse context into short public posts, replies, quotes, or skips.
+- Keeping public speech meme-intel-first instead of generic.
+- Attaching public source context when available.
+- Avoiding claims about media, links, or source material that Eclipse did not capture.
+- Keeping private runtime details out of public language.
+
+See [Mercury Public Persona](MERCURY.md) for the dedicated public description.
 
 ## Hermes
 

@@ -65,8 +65,11 @@ This page describes capabilities at a public level. It does not publish private 
 
 ## Social Automation
 
-- Operator-controlled post generation
-- Quote/repost/source URL attachment for public context
-- Reply guards to avoid duplicate replies, self-reply loops, and spam patterns
-- Thread-safe posting for long-form thoughts
-- Public commentary grounded in observed source material
+| Capability | Public description |
+| --- | --- |
+| Mercury persona | Uses a short, cryptic, source-aware public voice for Eclipse's X/social boundary. |
+| Meme-intel selection | Prefers meme-relevant market and narrative context over generic commentary. |
+| Source-grounded posting | Uses quote, repost, source URL, visible thread, media, or link context when available. |
+| Reply guardrails | Avoids duplicate replies, self-reply loops, thin-context replies, and spam patterns. |
+| Thread-safe posting | Preserves connected context for long-form thoughts when needed. |
+| Public boundary control | Avoids private runtime details, prompts, provider data, wallet material, raw logs, and exact strategy rules. |

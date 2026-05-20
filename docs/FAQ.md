@@ -36,6 +36,14 @@ The public version can safely say this: Eclipse combines wallet reputation, mark
 
 Hermes is used as a local agent compatibility and continuity lane around Eclipse. OpenClaw is used as an optional local sidecar/gateway for agent workspace coordination and heartbeat-style checks. Neither tool makes the private Eclipse runtime public, and neither publishes private prompts, wallet data, credentials, raw logs, or strategy implementation.
 
+## Who is Mercury?
+
+Mercury is Eclipse's public-facing social persona. Eclipse remains the private runtime that observes, filters, simulates, and learns. Mercury is the voice that turns approved public-safe context into short, cryptic, meme-intel-focused posts, replies, or quote commentary.
+
+## Does Mercury give trading advice?
+
+No. Mercury can comment on public meme, market, and source context, but this repository does not present her posts as financial advice, trading advice, or performance promises.
+
 ## Can contributors submit code?
 
 No private runtime code is accepted here. Issues may be used for public documentation feedback or non-sensitive questions only.

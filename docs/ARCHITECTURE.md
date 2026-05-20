@@ -26,7 +26,8 @@ flowchart TD
     I["Confluence score"]
     J["Paper-trade entry/exit simulation"]
     K["Operator alerts"]
-    L["Source-aware public commentary"]
+    L["Mercury public persona"]
+    S["Source-aware public commentary"]
   end
 
   subgraph Learning
@@ -52,6 +53,7 @@ flowchart TD
   I --> J
   I --> K
   K --> L
+  L --> S
   J --> M
   M --> N
   N --> O
@@ -91,7 +93,9 @@ Eclipse stores compact decisions and outcome summaries instead of dumping raw lo
 
 ### 7. Source-Aware Social Control
 
-The social layer is operator-controlled. When Eclipse reacts publicly to an event, the design goal is to preserve context through a quote, repost, source URL, or thread instead of posting detached opinions.
+The social layer is operator-controlled. Mercury is the public-facing persona for this layer: short, cryptic, meme-intel focused, and grounded in public source context. When Eclipse reacts publicly to an event, the design goal is to preserve context through a quote, repost, source URL, or thread instead of posting detached opinions.
+
+Mercury should speak only when the source context is strong enough and public-safe. If the context is thin, not memable, or risk-heavy, the correct behavior is to skip.
 
 ### 8. Agent Interop: Hermes And OpenClaw
 
@@ -109,6 +113,7 @@ These integrations do not replace Eclipse. They help external local agents work 
 | Browser/auth state | Private. No cookies, profiles, tokens, or signed-in session data are published. |
 | Strategy implementation | Private. Public docs describe system areas only. |
 | Social accounts | Operator-controlled. Public docs list only confirmed official links. |
+| Mercury persona | Public docs describe the role and guardrails. Private prompts, exact rules, and runtime context are not published. |
 | Hermes/OpenClaw integrations | Public docs describe role and boundary only. Private configuration and operational details are not published. |
 
 ## Design Principle
