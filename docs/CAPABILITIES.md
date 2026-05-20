@@ -54,6 +54,15 @@ This page describes capabilities at a public level. It does not publish private 
 - Health and status surfaces for runtime monitoring
 - Operator-facing chat and alert workflows
 
+## Agent Interop
+
+| Capability | Public description |
+| --- | --- |
+| Hermes compatibility | Accepts compatible local-model tool-call formats and keeps Hermes decisions tied into compact shared continuity. |
+| OpenClaw sidecar support | Lets approved local agents coordinate with Eclipse through an optional gateway and heartbeat-style workspace layer. |
+| Shared decision layer | Stores concise decisions from participating agents without publishing raw logs, prompts, credentials, wallet data, or runtime state. |
+| Boundary enforcement | Keeps public documentation separate from private source code, strategy logic, environment configuration, and operational data. |
+
 ## Social Automation
 
 - Operator-controlled post generation

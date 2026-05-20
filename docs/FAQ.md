@@ -32,6 +32,10 @@ No. Eclipse is experimental software. Nothing in this repository is financial ad
 
 The public version can safely say this: Eclipse combines wallet reputation, market structure, narrative context, risk evidence, simulation, and memory in one agent loop. It is designed to learn from outcomes rather than treat any single signal as absolute.
 
+## How are Hermes and OpenClaw used?
+
+Hermes is used as a local agent compatibility and continuity lane around Eclipse. OpenClaw is used as an optional local sidecar/gateway for agent workspace coordination and heartbeat-style checks. Neither tool makes the private Eclipse runtime public, and neither publishes private prompts, wallet data, credentials, raw logs, or strategy implementation.
+
 ## Can contributors submit code?
 
 No private runtime code is accepted here. Issues may be used for public documentation feedback or non-sensitive questions only.

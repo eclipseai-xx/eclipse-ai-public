@@ -8,6 +8,7 @@ This repository is intentionally separated from the private Eclipse runtime. Its
 - High-level architecture diagrams
 - Capability summaries
 - Public roadmap themes
+- High-level Hermes/OpenClaw integration roles
 - Security and privacy policy text
 - Official public links confirmed by the operator
 - Non-sensitive documentation corrections
@@ -20,6 +21,7 @@ This repository is intentionally separated from the private Eclipse runtime. Its
 - Wallet private keys, seed phrases, operational wallet addresses, raw wallet lists, or transaction dumps
 - Browser profiles, cookies, local databases, session files, and signed-in account state
 - Exact private thresholds, watchlists, scoring formulas, execution routes, or strategy implementation
+- Private Hermes/OpenClaw configuration, prompts, local paths, ports, gateway state, or agent workspace files
 - Screenshots containing private dashboards, account IDs, tokens, keys, balances, wallet addresses, or operational state
 - Internal coordination files from the private Eclipse workspace
 

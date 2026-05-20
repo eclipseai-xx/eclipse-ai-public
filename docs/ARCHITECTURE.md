@@ -35,6 +35,12 @@ flowchart TD
     O["Wallet and narrative model updates"]
   end
 
+  subgraph Agent_Interop["Agent interop"]
+    P["Hermes compatibility"]
+    Q["OpenClaw sidecar"]
+    R["Shared decisions"]
+  end
+
   A --> E
   B --> E
   C --> F
@@ -52,6 +58,9 @@ flowchart TD
   O --> F
   O --> G
   O --> H
+  P --> R
+  Q --> R
+  R --> N
 ```
 
 ## Core Subsystems
@@ -84,6 +93,12 @@ Eclipse stores compact decisions and outcome summaries instead of dumping raw lo
 
 The social layer is operator-controlled. When Eclipse reacts publicly to an event, the design goal is to preserve context through a quote, repost, source URL, or thread instead of posting detached opinions.
 
+### 8. Agent Interop: Hermes And OpenClaw
+
+Eclipse can coordinate with adjacent local-agent tools without exposing the private runtime. Hermes is used as a compatibility lane for local agent tool-call formats and compact decision continuity. OpenClaw is used as an optional sidecar/gateway for workspace onboarding, heartbeat checks, and approved local-agent coordination.
+
+These integrations do not replace Eclipse. They help external local agents work around the private runtime while the Eclipse system remains the owner of ingestion, scoring, memory, simulation, and operator controls.
+
 ## Trust Boundaries
 
 | Boundary | Public posture |
@@ -94,6 +109,7 @@ The social layer is operator-controlled. When Eclipse reacts publicly to an even
 | Browser/auth state | Private. No cookies, profiles, tokens, or signed-in session data are published. |
 | Strategy implementation | Private. Public docs describe system areas only. |
 | Social accounts | Operator-controlled. Public docs list only confirmed official links. |
+| Hermes/OpenClaw integrations | Public docs describe role and boundary only. Private configuration and operational details are not published. |
 
 ## Design Principle
 

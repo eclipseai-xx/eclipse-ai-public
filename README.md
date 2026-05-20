@@ -34,6 +34,7 @@ The system is designed for fast-moving environments where narrative, liquidity, 
 | Narrative engine | Maps public posts, cultural hooks, news events, and token lore into structured context. |
 | Paper trading | Simulates entries, exits, sizing, entry market cap, PnL, and strategy outcomes. |
 | Memory | Stores compact decisions and learned summaries instead of raw private logs. |
+| Agent integrations | Uses local agent adapters such as Hermes and optional gateway coordination through OpenClaw. |
 | Social execution | Supports source-aware posts, quote context, reply safety, and thread-safe long-form posting. |
 
 ## Architecture At A Glance
@@ -79,6 +80,7 @@ See [Security Boundary](docs/SECURITY_BOUNDARY.md) for the full publication poli
 
 - [Architecture Overview](docs/ARCHITECTURE.md)
 - [Capabilities](docs/CAPABILITIES.md)
+- [Hermes and OpenClaw Integrations](docs/INTEGRATIONS.md)
 - [Security Boundary](docs/SECURITY_BOUNDARY.md)
 - [Privacy and Data Handling](docs/PRIVACY.md)
 - [Public Verification](docs/VERIFICATION.md)
